@@ -1,0 +1,6 @@
+name: someenv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pytorch
