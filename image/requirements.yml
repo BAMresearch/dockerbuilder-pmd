@@ -1,4 +1,3 @@
-name: someenv
 channels:
   - conda-forge
   - defaults
