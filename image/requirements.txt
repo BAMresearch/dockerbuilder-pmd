@@ -1,0 +1,14 @@
+xlwt
+pandas
+matplotlib
+jupyter
+numpy
+openpyxl
+pybis
+chardet
+rdflib
+pint
+doit
+pydantic
+extpybis
+openbis2sqlite
