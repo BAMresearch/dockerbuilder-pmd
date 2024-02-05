@@ -10,5 +10,5 @@ rdflib
 pint
 doit
 pydantic
-extpybis
-openbis2sqlite
+bam77::extpybis
+bam77::openbis2sqlite
