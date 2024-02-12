@@ -1,0 +1,5 @@
+gmsh==4.11.1
+networkx
+pyqt5
+sphinx
+sqlalchemy
