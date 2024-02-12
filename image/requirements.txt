@@ -22,7 +22,7 @@ pytest
 pyyaml
 gmsh==4.11.1
 networkx
-pyqt5
+PyQt5
 sphinx
 sqlalchemy
 bam77::extpybis
