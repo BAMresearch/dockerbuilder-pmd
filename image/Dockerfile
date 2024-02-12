@@ -1,12 +1,14 @@
 # FROM quay.io/jupyter/base-notebook
 FROM jupyter/base-notebook:python-3.10.11
 
+USER root
+
 # Add bam77 to config
 RUN conda config --add channels bam77
 
 # Add gmsh shared libs
 ENV DEBIAN_FRONTEND=noninteractive
-RUN sudo apt-get install -y ffmpeg libsm6 libxext6
+RUN apt-get install -y ffmpeg libsm6 libxext6
 
 # Install conda requirements from the requirements_conda.txt file
 COPY --chown=${NB_UID}:${NB_GID} requirements_conda.txt /tmp/
