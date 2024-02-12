@@ -1,3 +1,4 @@
+pip
 xlwt
 pandas
 matplotlib
@@ -19,13 +20,11 @@ mpich
 pyvista
 pytest
 pyyaml
+gmsh==4.11.1
+networkx
+pyqt5
+sphinx
+sqlalchemy
 bam77::extpybis
 bam77::openbis2sqlite
 bam77::fenicsxconcrete
-pip
-pip:
-- gmsh==4.11.1
-- networkx
-- pyqt5
-- sphinx
-- sqlalchemy
