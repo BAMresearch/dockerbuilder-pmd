@@ -6,7 +6,7 @@ RUN conda config --add channels bam77
 
 # Add gmsh shared libs
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get install -y ffmpeg libsm6 libxext6
+RUN sudo apt-get install -y ffmpeg libsm6 libxext6
 
 # Install conda requirements from the requirements_conda.txt file
 COPY --chown=${NB_UID}:${NB_GID} requirements_conda.txt /tmp/
