@@ -10,5 +10,22 @@ rdflib
 pint
 doit
 pydantic
+pythonocc-core=7.7.0
+doit
+pandas
+sqlite
+meshio
+mpich
+pyvista
+pytest
+pyyaml
 bam77::extpybis
 bam77::openbis2sqlite
+bam77::fenicsxconcrete
+pip
+pip:
+- gmsh==4.11.1
+- networkx
+- pyqt5
+- sphinx
+- sqlalchemy
