@@ -1,4 +1,5 @@
-FROM quay.io/jupyter/base-notebook
+# FROM quay.io/jupyter/base-notebook
+FROM jupyter/base-notebook:python-3.10.11
 
 RUN mamba install --yes 'flake8' && \
     mamba clean --all -f -y && \
