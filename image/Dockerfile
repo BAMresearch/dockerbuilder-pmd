@@ -9,7 +9,7 @@ RUN conda config --add channels bam77
 # Add gmsh shared libs
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y libgl1 libxcursor-dev libxft2 libx11-dev libxinerama-dev
-RUN apt install libxext6 gmsh freecad
+RUN apt install libxext6 gmsh
 
 # Install conda requirements from the requirements_conda.txt file
 COPY --chown=${NB_UID}:${NB_GID} requirements_conda.txt /tmp/
