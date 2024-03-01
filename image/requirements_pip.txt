@@ -1,4 +1,5 @@
 gmsh==4.11.1
+gmsh-sdk
 networkx
 pyqt5
 sphinx

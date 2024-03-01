@@ -8,7 +8,7 @@ RUN conda config --add channels bam77
 
 # Add gmsh shared libs
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y libgl1 libxcursor-dev libxft2
+RUN apt-get update && apt-get install -y libgl1 libxcursor-dev libxft2 libx11 libxinerama
 RUN apt install libxext6
 
 # Install conda requirements from the requirements_conda.txt file
