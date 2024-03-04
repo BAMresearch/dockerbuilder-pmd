@@ -17,7 +17,7 @@ pandas
 sqlite
 meshio
 mpich
-pyvista
+pyvista[all]
 pytest
 pyyaml
 bam77::extpybis
