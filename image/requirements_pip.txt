@@ -4,3 +4,5 @@ networkx
 pyqt5
 sphinx
 sqlalchemy
+trame
+ipywidgets
