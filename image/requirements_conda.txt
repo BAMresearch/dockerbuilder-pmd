@@ -20,6 +20,8 @@ mpich
 pyvista[all]
 pytest
 pyyaml
+conda-forge::nb_conda
+conda-forge::nb_conda_kernels
 bam77::extpybis
 bam77::openbis2sqlite
 bam77::fenicsxconcrete
