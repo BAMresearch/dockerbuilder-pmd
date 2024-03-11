@@ -1,5 +1,4 @@
-# FROM quay.io/jupyter/base-notebook
-FROM jupyter/base-notebook:python-3.10.11
+FROM jupyter/scipy-notebook:python-3.11.8 
 
 USER root
 
@@ -18,14 +17,3 @@ RUN mamba install -v --yes --file /tmp/requirements_conda.txt && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
-# Install pip requirements from the requirements_pip.txt file
-COPY --chown=${NB_UID}:${NB_GID} requirements_pip.txt /tmp/
-RUN pip install --no-cache-dir --requirement /tmp/requirements_pip.txt && \
-    fix-permissions "${CONDA_DIR}" && \
-    fix-permissions "/home/${NB_USER}"
-
-RUN git clone https://github.com/tpaviot/pythonocc-utils.git
-
-RUN pip install ./pythonocc-utils && \
-    fix-permissions "${CONDA_DIR}" && \
-    fix-permissions "/home/${NB_USER}"
