@@ -1,5 +1,6 @@
-# dockerbuilder
-Repo for building docker images in Github actions
+# dockerbuilder-pmd
+
+Repo for building docker images for the BAM PMD server in Github actions
 
 ## Setup guide for gui applications following [jupyterhub-deploy-docker](https://github.com/jupyterhub/jupyterhub-deploy-docker)
 
