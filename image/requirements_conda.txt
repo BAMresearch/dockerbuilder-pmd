@@ -1,4 +1,0 @@
-pip
-doit
-conda-forge::nb_conda
-conda-forge::nb_conda_kernels

@@ -1,0 +1,8 @@
+channels:
+- conda-forge
+- bam77
+dependencies:
+- pip
+- doit
+- conda-forge::nb_conda
+- conda-forge::nb_conda_kernels

@@ -1,19 +1,24 @@
-FROM quay.io/jupyter/scipy-notebook:python-3.11
+FROM pyiron/pyiron:latest
 
-USER root
+USER $DOCKER_UIDs
+WORKDIR $HOME
+ARG PYTHON_VERSION=default
 
-# Add bam77 to config
 RUN conda config --add channels bam77
 
-# Add gmsh shared libs
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y libgl1 libxcursor-dev libxft2 libx11-dev libxinerama-dev
-RUN apt install -y libxext6 git libgl1-mesa-dev xvfb
-
-# Install conda requirements from the requirements_conda.txt file
-COPY --chown=${NB_UID}:${NB_GID} requirements_conda.txt /tmp/
-RUN mamba install -v --yes --file /tmp/requirements_conda.txt && \
+COPY . ${HOME}/
+RUN mamba env update -n base -f ${HOME}/environment.yml && \
     mamba clean --all -f -y && \
-    fix-permissions "${CONDA_DIR}" && \
-    fix-permissions "/home/${NB_USER}"
+    mamba list
 
+USER root
+ENV NOTEBOOK_DIR=${HOME}/notebooks_pyiron
+RUN chmod +x ${HOME}/include_notebooks.sh && \
+    /bin/bash include_notebooks.sh &&\
+    fix-permissions $CONDA_DIR && \
+    fix-permissions ${HOME}
+
+# Switch back to pyiron to avoid accidental container runs as root
+USER $DOCKER_UID
+
+WORKDIR $HOME
